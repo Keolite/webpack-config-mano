@@ -4,6 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizeWebpackPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 573fc4fe2fd881b7554561e97f77bd3c419971e3
 
 module.exports = {
     entry : {
@@ -20,14 +25,15 @@ module.exports = {
     module:{
         rules: [
             {
-                test: /\.html?$/,
-                use:[
-                    {
-                        loader: 'html-loader',
-                        options: { minimize: true }
-                    }
+                test: /\.html$/,
+                use: [
+                  {
+                    loader: "html-loader",
+                    options: { minimize: true }
+                  }
                 ]
             },
+           
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader,'css-loader']
@@ -61,6 +67,7 @@ module.exports = {
                     filename: 'assets/fonts/[name][ext]'
                 }
             }
+            
         ]
     },
     plugins : [
