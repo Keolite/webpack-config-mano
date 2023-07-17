@@ -1,4 +1,3 @@
-import './app.js';
 import './style.css';
 
 let a = 'lol';
